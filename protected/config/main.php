@@ -10,7 +10,7 @@ return array(
 	'language'=>'es_es',
 	'sourceLanguage'=>'en',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Psushi',
 	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
