@@ -8,10 +8,10 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-
+	'aliases'=>array('boostrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
 	// preloading 'log' component
-	'preload'=>array('log'),
-
+	'preload'=>array('log','boostrap'),
+	'theme'=>'heart',
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -23,9 +23,9 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'0303',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		
 	),
@@ -73,7 +73,14 @@ return array(
 				*/
 			),
 		),
-
+		'boostrap'=>array(
+			'class'=>'boostrap.components.Bootstrap',
+			'fontAwesomeCss'=>true,
+			'minify'=>true,
+		),
+		'themeManager'=>array(
+			'basePath'=>'protected/extensions',
+		),
 	),
 
 	// application-level parameters that can be accessed
