@@ -8,9 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-	'aliases'=>array('boostrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
+	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
 	// preloading 'log' component
-	'preload'=>array('log','boostrap'),
+	'preload'=>array('log','bootstrap'),
 	'theme'=>'heart',
 	// autoloading model and component classes
 	'import'=>array(
@@ -73,8 +73,8 @@ return array(
 				*/
 			),
 		),
-		'boostrap'=>array(
-			'class'=>'boostrap.components.Bootstrap',
+		'bootstrap'=>array(
+			'class'=>'bootstrap.components.Bootstrap',
 			'fontAwesomeCss'=>true,
 			'minify'=>true,
 		),
