@@ -11,7 +11,7 @@ return array(
 	'sourceLanguage'=>'en',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Psushi',
-	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
+	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster/src')),
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
 	'theme'=>'heart',
