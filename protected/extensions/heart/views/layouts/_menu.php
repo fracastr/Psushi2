@@ -10,7 +10,7 @@ $menu=
 		array('label'=>'Home', 'url'=>array('/site/index'), 'icon'=>'fa fa-home','active'=>($currController=='site' and $currAction=='index' )),
 		array('label'=>'Cuentas de usuario', 'url'=>'#', 'icon'=>'fa fa-users', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
 			array('label'=>'Administrador', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=administrador/create', 'icon'=>'fa fa-user-plus', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=administrador/create', 'icon'=>'fa fa-plus', 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Ver cuentas', 'url'=>'index.php?r=administrador/index', 'icon'=>'fa fa-file-text-o', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 			array('label'=>'Encargado Cocina', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
