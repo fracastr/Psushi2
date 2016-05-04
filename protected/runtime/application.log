@@ -439,3 +439,20 @@ in C:\wamp64\www\psushi2\index.php (13)
 in C:\wamp64\www\psushi2\index.php (13)
 2016/05/04 07:05:50 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
 in C:\wamp64\www\psushi2\index.php (13)
+2016/05/04 07:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=administrador/index".' in C:\wamp64\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=administrado...')
+#1 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/psushi2/index.php?r=?r=administrador/index
+HTTP_REFERER=http://localhost/psushi2/
+---
+2016/05/04 07:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=administrador/index".' in C:\wamp64\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=administrado...')
+#1 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/psushi2/index.php?r=?r=administrador/index
+---
