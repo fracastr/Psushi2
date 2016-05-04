@@ -14,11 +14,11 @@ $menu=
 				array('label'=>'Ver cuentas', 'url'=>'index.php?r=administrador/index', 'icon'=>'fa fa-file-text-o', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 			array('label'=>'Encargado Cocina', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=encargado_cocina/create', 'icon'=>'fa fa-user-plus', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=encargado_cocina/create', 'icon'=>'fa fa-plus', 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Ver cuentas', 'url'=>'index.php?r=encargado_cocina/index', 'icon'=>'fa fa-file-text-o', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 			array('label'=>'Repartidor', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=repartidor/create', 'icon'=>'fa fa-user-plus', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=repartidor/create', 'icon'=>'fa fa-plus', 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Ver cuentas', 'url'=>'index.php?r=repartidor/index', 'icon'=>'fa fa-file-text-o', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 		)),
