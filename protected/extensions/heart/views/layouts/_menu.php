@@ -8,7 +8,7 @@ $currRoutes			= explode('/', $currRoute);
 $menu=
 	array(
 		array('label'=>'Home', 'url'=>array('/site/index'), 'icon'=>'fa fa-home','active'=>($currController=='site' and $currAction=='index' )),
-		array('label'=>'Personal', 'url'=>'#', 'icon'=>'fa fa-users', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
+		array('label'=>'Cuentas de usuario', 'url'=>'#', 'icon'=>'fa fa-users', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
 			array('label'=>'Administrador', 'url'=>array('administrador/index'), 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Encargado Cocina', 'url'=>array('encargado_cocina/index'), 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Repartidor', 'url'=>array('repartidor/index'), 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
