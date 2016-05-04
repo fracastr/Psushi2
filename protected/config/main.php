@@ -12,7 +12,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 	'aliases'=>array(
-		'bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster'),
+		'bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster/src'),
 	),
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
