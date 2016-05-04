@@ -7,9 +7,13 @@
 // CWebApplication properties can be configured here.
 
 return array(
+	'language'=>'es_es',
+	'sourceLanguage'=>'en',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster')),
+	'aliases'=>array(
+		'bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster'),
+	),
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
 	'theme'=>'heart',
@@ -27,6 +31,9 @@ return array(
 			'password'=>'0303',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			//'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths'=>array(
+				'ext.heart.gii'),
+
 		),
 		
 	),
