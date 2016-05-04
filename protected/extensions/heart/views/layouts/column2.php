@@ -3,13 +3,13 @@
 <div class="row-fluid">
 	<div class="span3">
 		<div id="sidebar">
-		<?php /*$box = $this->beginWidget(
+		<?php $box = $this->beginWidget(
 		    'bootstrap.widgets.TbBox',
 		    array(
 		        'title' => $this->menuCaption,
 		        'headerIcon' => 'icon- fa fa-list-alt'
 		    )
-		);*/?>
+		);?>
 
 		<?php
 			$this->widget(
