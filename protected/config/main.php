@@ -11,7 +11,7 @@ return array(
 	'sourceLanguage'=>'en',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Psushi',
-	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/YiiBooster/src')),
+	'aliases'=>array('bootstrap'=>realpath(__DIR__.'/../extensions/yiibooster2')),
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
 	'theme'=>'heart',
@@ -77,7 +77,7 @@ return array(
 			),
 		),
 		'bootstrap'=>array(
-			'class'=>'bootstrap.components.Booster',
+			'class'=>'bootstrap.components.Bootstrap',
 			'fontAwesomeCss'=>true,
 			'minify'=>true,
 		),
