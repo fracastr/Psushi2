@@ -82,7 +82,7 @@ return array(
 			),
 		),
 		'bootstrap'=>array(
-			'class'=>'bootstrap.components.Bootstrap',
+			'class'=>'bootstrap.components.Booster',
 			'fontAwesomeCss'=>true,
 			'minify'=>true,
 		),
