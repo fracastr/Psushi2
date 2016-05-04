@@ -11,15 +11,15 @@ $menu=
 		array('label'=>'Cuentas de usuario', 'url'=>'#', 'icon'=>'fa fa-users', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
 			array('label'=>'Administrador', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
 				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=administrador/create', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Ver cuentas', 'url'=>'administrador/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Ver cuentas', 'url'=>'index.php?r=administrador/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 			array('label'=>'Encargado Cocina', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-				array('label'=>'Crear nueva cuenta', 'url'=>'encargado_cocina/create', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Ver cuentas', 'url'=>'encargado_cocina/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=encargado_cocina/create', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Ver cuentas', 'url'=>'index.php?r=encargado_cocina/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 			array('label'=>'Repartidor', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-				array('label'=>'Crear nueva cuenta', 'url'=>'repartidor/create', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Ver cuentas', 'url'=>'repartidor/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Crear nueva cuenta', 'url'=>'index.php?r=repartidor/create', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Ver cuentas', 'url'=>'index.php?r=repartidor/index', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 		)),
 		array('label'=>'Admin', 'url'=>'#', 'icon'=>'fa fa-gear', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
