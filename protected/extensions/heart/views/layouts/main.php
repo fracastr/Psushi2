@@ -57,12 +57,12 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
 	<div class="clearfix"></div>
 </div><!-- page -->
 
-<?php
+<?php /*
 $this->widget('bootstrap.widgets.TbNavbar', array(
 	'brand' => '<small>Copyright &copy; 2014 by Hafid Mukhlasin. All Rights Reserved</small>',
 	'fixed' => 'bottom',
 	'type' => 'inverse',
-));
+)); */
 ?>
 </body>
 </html>
