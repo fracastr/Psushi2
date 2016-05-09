@@ -66,6 +66,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 <?php echo CHtml::beginForm(array('export')); ?>
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'administrador-grid',
+	'emptyText'=>'No existen cuentas de Administrador',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'type' => 'striped hover', //bordered condensed
