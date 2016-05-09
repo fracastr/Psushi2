@@ -6,8 +6,8 @@
 	'Administradors',
 ); */
 ?>
-<div class="page-header">
-  <h1>Cuentas de Administrador</h1>
+<div class="page-header" align="right">
+  <h2>Cuentas de Administrador</h2>
 </div>
 
 <?php
