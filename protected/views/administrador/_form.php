@@ -18,7 +18,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="300" title="dropdown de las sucursales">
+		<td width="300">
+			dropdown de las sucursales
 		<?php echo $form->textFieldRow($model,'ID_SUCURSAL',array('class'=>'span5')); ?>
 		</td>
 	</tr>
