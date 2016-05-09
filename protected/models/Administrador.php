@@ -35,7 +35,7 @@ class Administrador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('RUT_PERSONAL', 'required'),
+			array('RUT_PERSONAL, TELEFONO_PERSONAL', 'required', 'message'=>'Este campo es obligatorio'),
 			array('ID_SUCURSAL, TELEFONO_PERSONAL', 'numerical', 'integerOnly'=>true),
 			array('AUTORIZADO_PERSONAL', 'numerical', 'integerOnly'=>false),
 			array('RUT_PERSONAL', 'length', 'max'=>15),
