@@ -3,7 +3,7 @@
 /* @var $model Administrador */
 ?>
 <div class="page-header" align="right">
-	<h2>Detalles de la cuenta</h2>
+	<h2>Detalles de la cuenta <small> Administrador</small></h2>
 </div>
 <?php
 $menu=array();
