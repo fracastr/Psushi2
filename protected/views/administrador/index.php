@@ -142,7 +142,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 
 
 <?php echo CHtml::endForm(); ?>
-<?php $this->endWidget(); ?>
+
 <?php  $this->beginWidget(
     'bootstrap.widgets.TbModal',
     array('id' => 'myModal')
@@ -168,4 +168,4 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
         ); ?>
     </div>
  
-
+<?php  $this->endWidget(); ?>
