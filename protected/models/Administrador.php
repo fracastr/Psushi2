@@ -72,18 +72,18 @@ class Administrador extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'RUT_PERSONAL' => 'Rut Personal',
-			'ID_SUCURSAL' => 'Id Sucursal',
-			'NOMBRE_PERSONAL' => 'Nombre Personal',
-			'PATERNO_PERSONAL' => 'Paterno Personal',
-			'MATERNO_PERSONAL' => 'Materno Personal',
-			'CONTRASENA_PERSONAL' => 'Contrasena Personal',
-			'SEXO_PERSONAL' => 'Sexo Personal',
-			'TELEFONO_PERSONAL' => 'Telefono Personal',
-			'DIRECCION_PERSONAL' => 'Direccion Personal',
-			'EMAIL_PERSONAL' => 'Email Personal',
-			'AUTORIZADO_PERSONAL' => 'Autorizado Personal',
-			'CARGO_PERSONAL' => 'Cargo Personal',
+			'RUT_PERSONAL' => 'Rut',
+			'ID_SUCURSAL' => 'Sucursal',
+			'NOMBRE_PERSONAL' => 'Nombre',
+			'PATERNO_PERSONAL' => 'Apellido paterno',
+			'MATERNO_PERSONAL' => 'Apellido materno',
+			'CONTRASENA_PERSONAL' => 'Contraseña',
+			'SEXO_PERSONAL' => 'Sexo',
+			'TELEFONO_PERSONAL' => 'Teléfono',
+			'DIRECCION_PERSONAL' => 'Dirección',
+			'EMAIL_PERSONAL' => 'Email',
+			'AUTORIZADO_PERSONAL' => 'Autorizado',
+			'CARGO_PERSONAL' => 'Cargo',
 		);
 	}
 
