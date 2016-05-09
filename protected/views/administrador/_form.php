@@ -13,33 +13,51 @@
 	<?php echo $form->errorSummary($model); ?>
 <table>
 	<tr>
-		<td width="300">
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'RUT_PERSONAL',array('class'=>'span5','maxlength'=>15)); ?>
 		</td>
 	</tr>
 	<tr>
-		<td width="300">
+		<td width="200">
 		dropdown de las sucursales<?php echo $form->textFieldRow($model,'ID_SUCURSAL',array('class'=>'span5')); ?>
 		</td>
 	</tr>
 	<tr>
-		<td width="300">
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'NOMBRE_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
 		</td>
-		<td width="300">
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'PATERNO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
 		</td>
-		<td width="300">
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'MATERNO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
 		</td>
 	</tr>
-		<?php echo $form->textFieldRow($model,'CONTRASENA_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
+	<tr>
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'SEXO_PERSONAL',array('class'=>'span5','maxlength'=>1)); ?>
+		</td>
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'TELEFONO_PERSONAL',array('class'=>'span5')); ?>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'DIRECCION_PERSONAL',array('class'=>'span5','maxlength'=>50)); ?>
+		</td>
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'EMAIL_PERSONAL',array('class'=>'span5','maxlength'=>100)); ?>
+		</td>
+	</tr>
+	<tr>
+		<td width="200">
 		<?php echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
-		<?php echo $form->textFieldRow($model,'CARGO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
+		</td>
+		<td width="200">
+		<?php echo $form->textFieldRow($model,'CONTRASENA_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
+		</td>
+	</tr>
+		<!-- <?php // echo $form->textFieldRow($model,'CARGO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?> -->
 </table>
 
 <div class="form-actions">
