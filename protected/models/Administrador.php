@@ -36,7 +36,7 @@ class Administrador extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('RUT_PERSONAL', 'required'),
-			array('ID_SUCURSAL, TELEFONO_PERSONAL, AUTORIZADO_PERSONAL', 'numerical', 'integerOnly'=>true),
+			array('ID_SUCURSAL, TELEFONO_PERSONAL', 'numerical', 'integerOnly'=>true),
 			array('RUT_PERSONAL', 'length', 'max'=>15),
 			array('NOMBRE_PERSONAL, PATERNO_PERSONAL, MATERNO_PERSONAL, CONTRASENA_PERSONAL, CARGO_PERSONAL', 'length', 'max'=>30),
 			array('SEXO_PERSONAL', 'length', 'max'=>1),
