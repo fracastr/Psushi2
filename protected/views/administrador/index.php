@@ -101,13 +101,18 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
 	    ),
 		
+		array(
+			'name'=> 'AUTORIZADO_PERSONAL',
+			'value' => '($data->AUTORIZADO_PERSONAL)',
+			'headerHtmlOptions' => array('style' => 'text-align:center;'),
+		),
 		
 		
 		//'SEXO_PERSONAL',
 		//'TELEFONO_PERSONAL',
 		//'DIRECCION_PERSONAL',
 		//'EMAIL_PERSONAL',
-		'AUTORIZADO_PERSONAL',
+		//'AUTORIZADO_PERSONAL',
 		//'CARGO_PERSONAL',
 
 		/*
