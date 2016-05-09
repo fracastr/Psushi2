@@ -168,4 +168,4 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
         ); ?>
     </div>
  
-<?php  $this->endWidget(); ?>
+
