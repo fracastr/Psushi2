@@ -53,9 +53,17 @@
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
 		</td>
-		<td width="200">
-		<?php echo $form->textFieldRow($model,'CONTRASENA_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
+		<td WIDTH=200>
+			<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				Cambiar contraseña
+			</button>
+			<div class="collapse" id="collapseExample">
+				<div class="well">
+					<?php echo $form->textFieldRow($model,'CONTRASENA_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
+				</div>
+			</div>
 		</td>
+			
 	</tr>
 		<!-- <?php // echo $form->textFieldRow($model,'CARGO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?> -->
 </table>
