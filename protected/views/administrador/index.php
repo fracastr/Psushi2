@@ -5,7 +5,12 @@
 /* $this->breadcrumbs=array(
 	'Administradors',
 ); */
+?>
+<div class="page-header">
+  <h1>Cuentas de Administrador</h1>
+</div>
 
+<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 $this->menu=array(
