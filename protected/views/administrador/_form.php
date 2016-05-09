@@ -10,7 +10,8 @@
 
 <p class="note" xmlns="http://www.w3.org/1999/html">Los campos marcados con <span class="required">*</span> son obligatorios.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,'Por favor, corrija los siguientes errores'); ?>
+	<?php //echo $form->errorSummary($model); ?>
 <table>
 	<tr>
 		<td width="200">
