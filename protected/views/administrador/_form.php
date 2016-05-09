@@ -52,7 +52,7 @@
 	<tr>
 		
 		<?php //echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
-		<td WIDTH=200>Ingreso Autorizado<?php echo $form->checkBox($model,'AUTORIZADO_PERSONAL',array('class'=>'span5','maxlength'=>2, 'style'=> 'width:20px','value'=>'Sí', 'uncheckValue'=>'No')); ?></td>
+		<td WIDTH=200>Ingreso Autorizado<?php echo $form->checkBox($model,'AUTORIZADO_PERSONAL',array('class'=>'span5','maxlength'=>2, 'style'=> 'width:20px','value'=>'1', 'uncheckValue'=>'0')); ?></td>
 		
 	</tr>
 	<tr>
