@@ -1,8 +1,11 @@
 <?php
 /* @var $this AdministradorController */
 /* @var $model Administrador */
-
-
+?>
+<div class="page-header" align="right">
+	<h2>Detalles de la cuenta</h2>
+</div>
+<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 
