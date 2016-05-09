@@ -2,9 +2,9 @@
 /* @var $this AdministradorController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/* $this->breadcrumbs=array(
 	'Administradors',
-);
+); */
 
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
@@ -51,7 +51,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		));
 		?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
+<?php // echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 	'model'=>$model,
