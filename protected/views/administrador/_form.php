@@ -53,6 +53,8 @@
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
 		</td>
+	</tr>
+	<tr>
 		<td WIDTH=200>
 			<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 				Cambiar contraseña
