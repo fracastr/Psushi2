@@ -50,9 +50,10 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="200">
-		<?php echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
-		</td>
+		
+		<?php //echo $form->textFieldRow($model,'AUTORIZADO_PERSONAL',array('class'=>'span5')); ?>
+		<td WIDTH=200>Ingreso Autorizado<?php echo $form->checkBox($model,'AUTORIZADO_PERSONAL',array('class'=>'span5','maxlength'=>2, 'style'=> 'width:20px','value'=>'Sí', 'uncheckValue'=>'No')); ?></td>
+		
 	</tr>
 	<tr>
 		<td WIDTH=200>
