@@ -8,7 +8,7 @@
 	// 'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
-	<p class="note">Los campos marcados con <span class="required">*</span> son obligatorios.</p>
+<p class="note" xmlns="http://www.w3.org/1999/html">Los campos marcados con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 <table>
@@ -16,8 +16,6 @@
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'RUT_PERSONAL',array('class'=>'span5','maxlength'=>15)); ?>
 		</td>
-	</tr>
-	<tr>
 		<td width="200">
 		dropdown de las sucursales<?php echo $form->textFieldRow($model,'ID_SUCURSAL',array('class'=>'span5')); ?>
 		</td>
@@ -26,6 +24,8 @@
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'NOMBRE_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
 		</td>
+	</tr>
+	<tr>
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'PATERNO_PERSONAL',array('class'=>'span5','maxlength'=>30)); ?>
 		</td>
