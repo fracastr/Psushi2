@@ -77,11 +77,11 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
 	    ),
 		
-		array(
+		/*array(
 	        'name'=> 'ID_SUCURSAL',
 	        'value' => '($data->ID_SUCURSAL)',
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
-	    ),
+	    ),*/
 		
 		array(
 	        'name'=> 'NOMBRE_PERSONAL',
@@ -101,17 +101,13 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
 	    ),
 		
-		array(
-	        'name'=> 'CONTRASENA_PERSONAL',
-	        'value' => '($data->CONTRASENA_PERSONAL)',
-	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
-	    ),
+		
 		
 		//'SEXO_PERSONAL',
 		//'TELEFONO_PERSONAL',
 		//'DIRECCION_PERSONAL',
 		//'EMAIL_PERSONAL',
-		//'AUTORIZADO_PERSONAL',
+		'AUTORIZADO_PERSONAL',
 		//'CARGO_PERSONAL',
 
 		/*
