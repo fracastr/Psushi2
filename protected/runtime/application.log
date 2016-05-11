@@ -705,3 +705,130 @@ in C:\wamp64\www\psushi2\index.php (13)
 2016/05/09 20:28:36 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
 in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
 in C:\wamp64\www\psushi2\index.php (13)
+2016/05/10 19:20:08 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
+in C:\xampp\htdocs\yii\psushi2\index.php (13)
+2016/05/10 19:20:32 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
+in C:\xampp\htdocs\yii\psushi2\index.php (13)
+2016/05/10 19:43:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sucursal/update')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=sucursal/update
+---
+2016/05/10 19:44:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sucursal/update')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=sucursal/update
+---
+2016/05/10 19:44:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sucursal/update')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=sucursal/update
+---
+2016/05/10 19:51:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sucursal/view')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=sucursal/view
+---
+2016/05/10 20:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cliente/create".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/create')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=cliente/create
+---
+2016/05/10 20:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cliente".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=cliente
+---
+2016/05/10 20:39:49 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
+in C:\xampp\htdocs\yii\psushi2\index.php (13)
+2016/05/10 20:39:58 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
+in C:\xampp\htdocs\yii\psushi2\index.php (13)
+2016/05/11 01:27:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('sucursal/delete')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?ajax=sucursal-grid&id=1&r=sucursal%2Fdelete
+HTTP_REFERER=http://localhost/yii/psushi2/index.php?r=sucursal/index
+---
+2016/05/11 02:44:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/u...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\psushi2\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/psushi2/index.php?r=administrador/update
+---

@@ -26,9 +26,10 @@ class Sucursal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_SUCURSAL', 'required'),
+			array('ID_SUCURSAL', 'required','message'=>'Indique id sucursal'),
 			array('ID_SUCURSAL', 'numerical', 'integerOnly'=>true),
 			array('NOMBRE_SUCURSAL, DIRECCION_SUCURSAL', 'length', 'max'=>50),
+
 			/*
 			//Example username
 			array('username', 'match', 'pattern' => '/^[A-Za-z0-9_]+$/u',
@@ -59,9 +60,9 @@ class Sucursal extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ID_SUCURSAL' => 'Id Sucursal',
-			'NOMBRE_SUCURSAL' => 'Nombre Sucursal',
-			'DIRECCION_SUCURSAL' => 'Direccion Sucursal',
+			'ID_SUCURSAL' => 'ID',
+			'NOMBRE_SUCURSAL' => 'Sucursal',
+			'DIRECCION_SUCURSAL' => 'Dirección',
 		);
 	}
 

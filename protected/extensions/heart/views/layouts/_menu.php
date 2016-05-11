@@ -22,6 +22,8 @@ $menu=
 				array('label'=>'Ver cuentas', 'url'=>'index.php?r=repartidor/index', 'icon'=>'fa fa-file-text-o', 'visible'=>!Yii::app()->user->isGuest),
 			)),
 		)),
+		array('label'=>'Sucursales', 'url'=>'index.php?r=sucursal/index', 'icon'=>'fa fa-cutlery', 'visible'=>!Yii::app()->user->isGuest),
+		array('label'=>'Clientes', 'url'=>'index.php?r=cliente/index', 'icon'=>'fa fa-child', 'visible'=>!Yii::app()->user->isGuest),
 		array('label'=>'Admin', 'url'=>'#', 'icon'=>'fa fa-gear', 'visible'=>!Yii::app()->user->isGuest, 'active'=> false ,'items'=>array(
 			array('label'=>'Generator Code', 'url'=>array('/gii/heart'), 'icon'=>'fa fa-refresh fa-fw', 'visible'=>!Yii::app()->user->isGuest),
 			//'---',

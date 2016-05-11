@@ -70,16 +70,16 @@ class Cliente extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'RUT_CLIENTE' => 'Rut Cliente',
-			'NOMBRE_CLIENTE' => 'Nombre Cliente',
-			'PATERNO_CLIENTE' => 'Paterno Cliente',
-			'MATERNO_CLIENTE' => 'Materno Cliente',
-			'CONTRASENA_CLIENTE' => 'Contrasena Cliente',
-			'SEXO_CLIENTE' => 'Sexo Cliente',
-			'TELEFONO_CLIENTE' => 'Telefono Cliente',
-			'DIRECCION_CLIENTE' => 'Direccion Cliente',
-			'EMAIL_CLIENTE' => 'Email Cliente',
-			'EDAD_CLIENTE' => 'Edad Cliente',
+			'RUT_CLIENTE' => 'Rut ',
+			'NOMBRE_CLIENTE' => 'Nombre',
+			'PATERNO_CLIENTE' => 'Apellido Paterno',
+			'MATERNO_CLIENTE' => 'Apellido Materno',
+			'CONTRASENA_CLIENTE' => 'Contraseña',
+			'SEXO_CLIENTE' => 'Sexo',
+			'TELEFONO_CLIENTE' => 'Teléfono',
+			'DIRECCION_CLIENTE' => 'Dirección',
+			'EMAIL_CLIENTE' => 'E-mail',
+			'EDAD_CLIENTE' => 'Edad',
 		);
 	}
 

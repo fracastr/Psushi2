@@ -1,9 +1,4 @@
 <?php
-$this->breadcrumbs=array(
-	'Sucursals'=>array('index'),
-	$model->ID_SUCURSAL=>array('view','id'=>$model->ID_SUCURSAL),
-	'Update',
-);
 
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
@@ -15,7 +10,7 @@ $this->menu=array(
 <?php $box = $this->beginWidget(
     'bootstrap.widgets.TbBox',
     array(
-        'title' => 'Update Sucursals #'.$model->ID_SUCURSAL,
+        'title' => 'Actualizar Sucursales #'.$model->ID_SUCURSAL,
         'headerIcon' => 'icon- fa fa-pencil',
         'headerButtons' => array(
             array(

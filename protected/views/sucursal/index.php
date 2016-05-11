@@ -2,9 +2,7 @@
 /* @var $this SucursalController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Sucursals',
-);
+
 
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
@@ -32,21 +30,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 
 ?>
 
-<?php $box = $this->beginWidget(
-    'bootstrap.widgets.TbBox',
-    array(
-        'title' => 'List Sucursals' ,
-        'headerIcon' => 'icon- fa fa-list-ol',
-        'headerButtons' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbButtonGroup',
-                'type' => 'success',
-                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'buttons' => $this->menu
-            ),
-        ) 
-    )
-);?>
+
 <?php /** $this->widget('bootstrap.widgets.TbListView',array(
 'dataProvider'=>$dataProvider,
 'itemView'=>'_view',
@@ -63,22 +47,21 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		        'danger'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), //success, info, warning, error or danger
 		    ),
 		));
-		?><p>
-	You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
-		&lt;&gt;</b>
-	or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+		?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
+
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-
+<div class="page-header" align="right">
+	<h1>Sucursales</h1>
+</div>
 <?php echo CHtml::beginForm(array('export')); ?>
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'sucursal-grid',
+	'emptyText'=>'No se han ingresado sucursales',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'type' => 'striped hover', //bordered condensed
@@ -115,40 +98,49 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	    */
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{view}',
+			'header'=>'Actualizar',
+			'template'=>'{update}',
 			'buttons'=>array
             (
-                'view' => array
-                (    
-                	'url' => '$data->ID_SUCURSAL."|".$data->ID_SUCURSAL',              
-                	'click' => 'function(){
-                		data=$(this).attr("href").split("|")
-                		$("#myModalHeader").html(data[1]);
-	        			$("#myModalBody").load("'.$this->createUrl('view').'&id="+data[0]+"&asModal=true");
-                		$("#myModal").modal();
-                		return false;
-                	}',
-                ),
+               'update'=>array(
+				   'icon'=>'fa fa-pencil',
+				   'label'=>'Actualizar este elemento',
+
+			   ),
+			 	'delete'=>array(
+					'icon'=>'fa fa-trash-o',
+					'label'=>'Eliminar',
+
+				),
+
                             )
+		),
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'header'=>'Eliminar',
+			'template'=>'{delete}',
+			'buttons'=>array
+			(
+				'update'=>array(
+					'icon'=>'fa fa-pencil',
+					'label'=>'Actualizar',
+
+				),
+				'delete'=>array(
+					'icon'=>'fa fa-trash-o',
+					'label'=>'Eliminar',
+
+				),
+
+			)
 		),
 	),
 )); ?>
 
-<select name="fileType" style="width:150px;">
-	<option value="Excel5">EXCEL 5 (xls)</option>
-	<option value="Excel2007">EXCEL 2007 (xlsx)</option>
-	<option value="HTML">HTML</option>
-	<option value="PDF">PDF</option>
-	<option value="WORD">WORD (docx)</option>
-</select>
-<br>
 
-<?php 
-$this->widget('bootstrap.widgets.TbButton', array(
-	'buttonType'=>'submit', 'icon'=>'fa fa-print','label'=>'Export', 'type'=> 'primary'));
-?>
+
 <?php echo CHtml::endForm(); ?>
-<?php $this->endWidget(); ?>
+
 <?php  $this->beginWidget(
     'bootstrap.widgets.TbModal',
     array('id' => 'myModal')
