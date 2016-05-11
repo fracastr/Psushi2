@@ -16,9 +16,6 @@
 			<td width="200">
 				<?php echo $form->textFieldRow($model,'RUT_CLIENTE',array('class'=>'span5','maxlength'=>15)); ?>
 			</td>
-		</tr>
-		
-		<tr>
 			<td width="200">
 				<?php echo $form->textFieldRow($model,'NOMBRE_CLIENTE',array('class'=>'span5','maxlength'=>30)); ?>
 			</td>
@@ -27,13 +24,17 @@
 		<tr>
 			<td width="200">
 				<?php echo $form->textFieldRow($model,'PATERNO_CLIENTE',array('class'=>'span5','maxlength'=>30)); ?>
+			</td>
+			<td width="200">
 				<?php echo $form->textFieldRow($model,'MATERNO_CLIENTE',array('class'=>'span5','maxlength'=>30)); ?>
 			</td>
 		</tr>
 		
 		<tr>
 			<td width="200">
-				<?php echo $form->textFieldRow($model,'CONTRASENA_CLIENTE',array('class'=>'span5','maxlength'=>30)); ?>
+				<?php echo $form->textFieldRow($model,'EDAD_CLIENTE',array('class'=>'span5'));  ?>
+			</td>
+			<td width="200">
 				<?php echo $form->textFieldRow($model,'SEXO_CLIENTE',array('class'=>'span5','maxlength'=>1)); ?>
 			</td>
 		</tr>
@@ -41,16 +42,25 @@
 		<tr>
 			<td width="200">
 				<?php echo $form->textFieldRow($model,'TELEFONO_CLIENTE',array('class'=>'span5')); ?>
-				<?php echo $form->textFieldRow($model,'DIRECCION_CLIENTE',array('class'=>'span5','maxlength'=>50)); ?>
+			</td>
+			<td width="200">
+					<?php echo $form->textFieldRow($model,'DIRECCION_CLIENTE',array('class'=>'span5','maxlength'=>50)); ?>
 			</td>
 		</tr>
 		
 		<tr>
 			<td width="200">
 				<?php echo $form->textFieldRow($model,'EMAIL_CLIENTE',array('class'=>'span5','maxlength'=>100)); ?>
-				<?php echo $form->textFieldRow($model,'EDAD_CLIENTE',array('class'=>'span5'));  ?>
 			</td>
 		</tr>
+
+		<tr>
+			<td width="200">
+				<?php echo $form->textFieldRow($model,'CONTRASENA_CLIENTE',array('class'=>'span5','maxlength'=>100)); ?>
+			</td>
+		</tr>
+		
+		
 	</table>
 
 
