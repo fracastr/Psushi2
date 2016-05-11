@@ -1,6 +1,6 @@
 <?php
 
-class ClienteController extends Controller
+class SucursalController extends Controller
 {
 	
 	
@@ -77,29 +77,29 @@ class ClienteController extends Controller
 	public function actionCreate()
 	{
 				
-		$model=new Cliente;
+		$model=new Sucursal;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cliente']))
+		if(isset($_POST['Sucursal']))
 		{
 			$transaction = Yii::app()->db->beginTransaction();
 			try{
 				$messageType='warning';
 				$message = "There are some errors ";
-				$model->attributes=$_POST['Cliente'];
+				$model->attributes=$_POST['Sucursal'];
 				//$uploadFile=CUploadedFile::getInstance($model,'filename');
 				if($model->save()){
 					$messageType = 'success';
 					$message = "<strong>Well done!</strong> You successfully create data ";
 					/*
-					$model2 = Cliente::model()->findByPk($model->RUT_CLIENTE);						
+					$model2 = Sucursal::model()->findByPk($model->ID_SUCURSAL);						
 					if(!empty($uploadFile)) {
 						$extUploadFile = substr($uploadFile, strrpos($uploadFile, '.')+1);
 						if(!empty($uploadFile)) {
-							if($uploadFile->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR.'cliente'.DIRECTORY_SEPARATOR.$model2->RUT_CLIENTE.DIRECTORY_SEPARATOR.$model2->RUT_CLIENTE.'.'.$extUploadFile)){
-								$model2->filename=$model2->RUT_CLIENTE.'.'.$extUploadFile;
+							if($uploadFile->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR.'sucursal'.DIRECTORY_SEPARATOR.$model2->ID_SUCURSAL.DIRECTORY_SEPARATOR.$model2->ID_SUCURSAL.'.'.$extUploadFile)){
+								$model2->filename=$model2->ID_SUCURSAL.'.'.$extUploadFile;
 								$model2->save();
 								$message .= 'and file uploded';
 							}
@@ -112,7 +112,7 @@ class ClienteController extends Controller
 					*/
 					$transaction->commit();
 					Yii::app()->user->setFlash($messageType, $message);
-					$this->redirect(array('view','id'=>$model->RUT_CLIENTE));
+					$this->redirect(array('view','id'=>$model->ID_SUCURSAL));
 				}				
 			}
 			catch (Exception $e){
@@ -143,13 +143,13 @@ class ClienteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cliente']))
+		if(isset($_POST['Sucursal']))
 		{
 			$messageType='warning';
 			$message = "There are some errors ";
 			$transaction = Yii::app()->db->beginTransaction();
 			try{
-				$model->attributes=$_POST['Cliente'];
+				$model->attributes=$_POST['Sucursal'];
 				$messageType = 'success';
 				$message = "<strong>Well done!</strong> You successfully update data ";
 
@@ -158,8 +158,8 @@ class ClienteController extends Controller
 				if(!empty($uploadFile)) {
 					$extUploadFile = substr($uploadFile, strrpos($uploadFile, '.')+1);
 					if(!empty($uploadFile)) {
-						if($uploadFile->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR.'cliente'.DIRECTORY_SEPARATOR.$model->RUT_CLIENTE.DIRECTORY_SEPARATOR.$model->RUT_CLIENTE.'.'.$extUploadFile)){
-							$model->filename=$model->RUT_CLIENTE.'.'.$extUploadFile;
+						if($uploadFile->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR.'sucursal'.DIRECTORY_SEPARATOR.$model->ID_SUCURSAL.DIRECTORY_SEPARATOR.$model->ID_SUCURSAL.'.'.$extUploadFile)){
+							$model->filename=$model->ID_SUCURSAL.'.'.$extUploadFile;
 							$message .= 'and file uploded';
 						}
 						else{
@@ -173,7 +173,7 @@ class ClienteController extends Controller
 				if($model->save()){
 					$transaction->commit();
 					Yii::app()->user->setFlash($messageType, $message);
-					$this->redirect(array('view','id'=>$model->RUT_CLIENTE));
+					$this->redirect(array('view','id'=>$model->ID_SUCURSAL));
 				}
 			}
 			catch (Exception $e){
@@ -182,9 +182,9 @@ class ClienteController extends Controller
 				// $this->refresh(); 
 			}
 
-			$model->attributes=$_POST['Cliente'];
+			$model->attributes=$_POST['Sucursal'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->RUT_CLIENTE));
+				$this->redirect(array('view','id'=>$model->ID_SUCURSAL));
 		}
 
 		$this->render('update',array(
@@ -219,16 +219,16 @@ class ClienteController extends Controller
 	public function actionIndex()
 	{
 		/*
-		$dataProvider=new CActiveDataProvider('Cliente');
+		$dataProvider=new CActiveDataProvider('Sucursal');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
 		*/
 		
-		$model=new Cliente('search');
+		$model=new Sucursal('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Cliente']))
-			$model->attributes=$_GET['Cliente'];
+		if(isset($_GET['Sucursal']))
+			$model->attributes=$_GET['Sucursal'];
 
 		$this->render('index',array(
 			'model'=>$model,
@@ -242,10 +242,10 @@ class ClienteController extends Controller
 	public function actionAdmin()
 	{
 		
-		$model=new Cliente('search');
+		$model=new Sucursal('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Cliente']))
-			$model->attributes=$_GET['Cliente'];
+		if(isset($_GET['Sucursal']))
+			$model->attributes=$_GET['Sucursal'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -257,12 +257,12 @@ class ClienteController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Cliente the loaded model
+	 * @return Sucursal the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Cliente::model()->findByPk($id);
+		$model=Sucursal::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -270,11 +270,11 @@ class ClienteController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Cliente $model the model to be validated
+	 * @param Sucursal $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='cliente-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='sucursal-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
@@ -283,30 +283,23 @@ class ClienteController extends Controller
 	
 	public function actionExport()
     {
-        $model=new Cliente;
+        $model=new Sucursal;
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_POST['Cliente']))
-			$model->attributes=$_POST['Cliente'];
+		if(isset($_POST['Sucursal']))
+			$model->attributes=$_POST['Sucursal'];
 
 		$exportType = $_POST['fileType'];
         $this->widget('ext.heart.export.EHeartExport', array(
-            'title'=>'List of Cliente',
+            'title'=>'List of Sucursal',
             'dataProvider' => $model->search(),
             'filter'=>$model,
             'grid_mode'=>'export',
             'exportType'=>$exportType,
             'columns' => array(
 	                
-					'RUT_CLIENTE',
-					'NOMBRE_CLIENTE',
-					'PATERNO_CLIENTE',
-					'MATERNO_CLIENTE',
-					'CONTRASENA_CLIENTE',
-					'SEXO_CLIENTE',
-					'TELEFONO_CLIENTE',
-					'DIRECCION_CLIENTE',
-					'EMAIL_CLIENTE',
-					'EDAD_CLIENTE',
+					'ID_SUCURSAL',
+					'NOMBRE_SUCURSAL',
+					'DIRECCION_SUCURSAL',
 	            ),
         ));
     }
@@ -318,16 +311,16 @@ class ClienteController extends Controller
 	public function actionImport()
 	{
 		
-		$model=new Cliente;
+		$model=new Sucursal;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cliente']))
+		if(isset($_POST['Sucursal']))
 		{
 			if (!empty($_FILES)) {
-				$tempFile = $_FILES['Cliente']['tmp_name']['fileImport'];
+				$tempFile = $_FILES['Sucursal']['tmp_name']['fileImport'];
 				$fileTypes = array('xls','xlsx'); // File extensions
-				$fileParts = pathinfo($_FILES['Cliente']['name']['fileImport']);
+				$fileParts = pathinfo($_FILES['Sucursal']['name']['fileImport']);
 				if (in_array(@$fileParts['extension'],$fileTypes)) {
 
 					Yii::import('ext.heart.excel.EHeartExcel',true);
@@ -341,28 +334,14 @@ class ClienteController extends Controller
 					$read_status = false;
 					while(!empty($sheetData[$baseRow]['A'])){
 						$read_status = true;						
-						$RUT_CLIENTE=  $sheetData[$baseRow]['A'];
-						$NOMBRE_CLIENTE=  $sheetData[$baseRow]['B'];
-						$PATERNO_CLIENTE=  $sheetData[$baseRow]['C'];
-						$MATERNO_CLIENTE=  $sheetData[$baseRow]['D'];
-						$CONTRASENA_CLIENTE=  $sheetData[$baseRow]['E'];
-						$SEXO_CLIENTE=  $sheetData[$baseRow]['F'];
-						$TELEFONO_CLIENTE=  $sheetData[$baseRow]['G'];
-						$DIRECCION_CLIENTE=  $sheetData[$baseRow]['H'];
-						$EMAIL_CLIENTE=  $sheetData[$baseRow]['I'];
-						$EDAD_CLIENTE=  $sheetData[$baseRow]['J'];
+						$ID_SUCURSAL=  $sheetData[$baseRow]['A'];
+						$NOMBRE_SUCURSAL=  $sheetData[$baseRow]['B'];
+						$DIRECCION_SUCURSAL=  $sheetData[$baseRow]['C'];
 
-						$model2=new Cliente;
-						$model2->RUT_CLIENTE=  $RUT_CLIENTE;
-						$model2->NOMBRE_CLIENTE=  $NOMBRE_CLIENTE;
-						$model2->PATERNO_CLIENTE=  $PATERNO_CLIENTE;
-						$model2->MATERNO_CLIENTE=  $MATERNO_CLIENTE;
-						$model2->CONTRASENA_CLIENTE=  $CONTRASENA_CLIENTE;
-						$model2->SEXO_CLIENTE=  $SEXO_CLIENTE;
-						$model2->TELEFONO_CLIENTE=  $TELEFONO_CLIENTE;
-						$model2->DIRECCION_CLIENTE=  $DIRECCION_CLIENTE;
-						$model2->EMAIL_CLIENTE=  $EMAIL_CLIENTE;
-						$model2->EDAD_CLIENTE=  $EDAD_CLIENTE;
+						$model2=new Sucursal;
+						$model2->ID_SUCURSAL=  $ID_SUCURSAL;
+						$model2->NOMBRE_SUCURSAL=  $NOMBRE_SUCURSAL;
+						$model2->DIRECCION_SUCURSAL=  $DIRECCION_SUCURSAL;
 
 						try{
 							if($model2->save()){
@@ -397,7 +376,7 @@ class ClienteController extends Controller
 
 	public function actionEditable(){
 		Yii::import('bootstrap.widgets.TbEditableSaver'); 
-	    $es = new TbEditableSaver('Cliente'); 
+	    $es = new TbEditableSaver('Sucursal'); 
 			    $es->update();
 	}
 
@@ -406,7 +385,7 @@ class ClienteController extends Controller
     	return array(
         		'toggle' => array(
                 	'class'=>'bootstrap.actions.TbToggleAction',
-                	'modelName' => 'Cliente',
+                	'modelName' => 'Sucursal',
         		)
     	);
 	}

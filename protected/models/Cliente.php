@@ -1,30 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "ADMINISTRADOR".
+ * This is the model class for table "CLIENTE".
  *
- * The followings are the available columns in table 'ADMINISTRADOR':
- * @property string $RUT_PERSONAL
- * @property integer $ID_SUCURSAL
- * @property string $NOMBRE_PERSONAL
- * @property string $PATERNO_PERSONAL
- * @property string $MATERNO_PERSONAL
- * @property string $CONTRASENA_PERSONAL
- * @property string $SEXO_PERSONAL
- * @property integer $TELEFONO_PERSONAL
- * @property string $DIRECCION_PERSONAL
- * @property string $EMAIL_PERSONAL
- * @property integer $AUTORIZADO_PERSONAL
- * @property string $CARGO_PERSONAL
+ * The followings are the available columns in table 'CLIENTE':
+ * @property string $RUT_CLIENTE
+ * @property string $NOMBRE_CLIENTE
+ * @property string $PATERNO_CLIENTE
+ * @property string $MATERNO_CLIENTE
+ * @property string $CONTRASENA_CLIENTE
+ * @property string $SEXO_CLIENTE
+ * @property integer $TELEFONO_CLIENTE
+ * @property string $DIRECCION_CLIENTE
+ * @property string $EMAIL_CLIENTE
+ * @property integer $EDAD_CLIENTE
  */
-class Administrador extends CActiveRecord
+class Cliente extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'ADMINISTRADOR';
+		return 'CLIENTE';
 	}
 
 	/**
@@ -35,15 +33,13 @@ class Administrador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('RUT_PERSONAL, TELEFONO_PERSONAL', 'required', 'message'=>'Este campo es obligatorio'),
-			array('ID_SUCURSAL, TELEFONO_PERSONAL', 'numerical', 'integerOnly'=>true),
-			array('AUTORIZADO_PERSONAL', 'numerical', 'integerOnly'=>false),
-			array('RUT_PERSONAL', 'length', 'max'=>15),
-			array('NOMBRE_PERSONAL, PATERNO_PERSONAL, MATERNO_PERSONAL, CONTRASENA_PERSONAL, CARGO_PERSONAL', 'length', 'max'=>30),
-			array('SEXO_PERSONAL', 'length', 'max'=>1),
-			array('DIRECCION_PERSONAL', 'length', 'max'=>50),
-			array('EMAIL_PERSONAL', 'length', 'max'=>100),
-			
+			array('RUT_CLIENTE', 'required'),
+			array('TELEFONO_CLIENTE, EDAD_CLIENTE', 'numerical', 'integerOnly'=>true),
+			array('RUT_CLIENTE', 'length', 'max'=>15),
+			array('NOMBRE_CLIENTE, PATERNO_CLIENTE, MATERNO_CLIENTE, CONTRASENA_CLIENTE', 'length', 'max'=>30),
+			array('SEXO_CLIENTE', 'length', 'max'=>1),
+			array('DIRECCION_CLIENTE', 'length', 'max'=>50),
+			array('EMAIL_CLIENTE', 'length', 'max'=>100),
 			/*
 			//Example username
 			array('username', 'match', 'pattern' => '/^[A-Za-z0-9_]+$/u',
@@ -53,7 +49,7 @@ class Administrador extends CActiveRecord
           	*/
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('RUT_PERSONAL, ID_SUCURSAL, NOMBRE_PERSONAL, PATERNO_PERSONAL, MATERNO_PERSONAL, CONTRASENA_PERSONAL, SEXO_PERSONAL, TELEFONO_PERSONAL, DIRECCION_PERSONAL, EMAIL_PERSONAL, AUTORIZADO_PERSONAL, CARGO_PERSONAL', 'safe', 'on'=>'search'),
+			array('RUT_CLIENTE, NOMBRE_CLIENTE, PATERNO_CLIENTE, MATERNO_CLIENTE, CONTRASENA_CLIENTE, SEXO_CLIENTE, TELEFONO_CLIENTE, DIRECCION_CLIENTE, EMAIL_CLIENTE, EDAD_CLIENTE', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,18 +70,16 @@ class Administrador extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'RUT_PERSONAL' => 'Rut',
-			'ID_SUCURSAL' => 'Sucursal',
-			'NOMBRE_PERSONAL' => 'Nombre',
-			'PATERNO_PERSONAL' => 'Apellido paterno',
-			'MATERNO_PERSONAL' => 'Apellido materno',
-			'CONTRASENA_PERSONAL' => 'Contraseña',
-			'SEXO_PERSONAL' => 'Sexo',
-			'TELEFONO_PERSONAL' => 'Teléfono',
-			'DIRECCION_PERSONAL' => 'Dirección',
-			'EMAIL_PERSONAL' => 'Email',
-			'AUTORIZADO_PERSONAL' => 'Autorizado',
-			'CARGO_PERSONAL' => 'Cargo',
+			'RUT_CLIENTE' => 'Rut Cliente',
+			'NOMBRE_CLIENTE' => 'Nombre Cliente',
+			'PATERNO_CLIENTE' => 'Paterno Cliente',
+			'MATERNO_CLIENTE' => 'Materno Cliente',
+			'CONTRASENA_CLIENTE' => 'Contrasena Cliente',
+			'SEXO_CLIENTE' => 'Sexo Cliente',
+			'TELEFONO_CLIENTE' => 'Telefono Cliente',
+			'DIRECCION_CLIENTE' => 'Direccion Cliente',
+			'EMAIL_CLIENTE' => 'Email Cliente',
+			'EDAD_CLIENTE' => 'Edad Cliente',
 		);
 	}
 
@@ -107,18 +101,16 @@ class Administrador extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('RUT_PERSONAL',$this->RUT_PERSONAL,true);
-		$criteria->compare('ID_SUCURSAL',$this->ID_SUCURSAL);
-		$criteria->compare('NOMBRE_PERSONAL',$this->NOMBRE_PERSONAL,true);
-		$criteria->compare('PATERNO_PERSONAL',$this->PATERNO_PERSONAL,true);
-		$criteria->compare('MATERNO_PERSONAL',$this->MATERNO_PERSONAL,true);
-		$criteria->compare('CONTRASENA_PERSONAL',$this->CONTRASENA_PERSONAL,true);
-		$criteria->compare('SEXO_PERSONAL',$this->SEXO_PERSONAL,true);
-		$criteria->compare('TELEFONO_PERSONAL',$this->TELEFONO_PERSONAL);
-		$criteria->compare('DIRECCION_PERSONAL',$this->DIRECCION_PERSONAL,true);
-		$criteria->compare('EMAIL_PERSONAL',$this->EMAIL_PERSONAL,true);
-		$criteria->compare('AUTORIZADO_PERSONAL',$this->AUTORIZADO_PERSONAL);
-		$criteria->compare('CARGO_PERSONAL',$this->CARGO_PERSONAL,true);
+		$criteria->compare('RUT_CLIENTE',$this->RUT_CLIENTE,true);
+		$criteria->compare('NOMBRE_CLIENTE',$this->NOMBRE_CLIENTE,true);
+		$criteria->compare('PATERNO_CLIENTE',$this->PATERNO_CLIENTE,true);
+		$criteria->compare('MATERNO_CLIENTE',$this->MATERNO_CLIENTE,true);
+		$criteria->compare('CONTRASENA_CLIENTE',$this->CONTRASENA_CLIENTE,true);
+		$criteria->compare('SEXO_CLIENTE',$this->SEXO_CLIENTE,true);
+		$criteria->compare('TELEFONO_CLIENTE',$this->TELEFONO_CLIENTE);
+		$criteria->compare('DIRECCION_CLIENTE',$this->DIRECCION_CLIENTE,true);
+		$criteria->compare('EMAIL_CLIENTE',$this->EMAIL_CLIENTE,true);
+		$criteria->compare('EDAD_CLIENTE',$this->EDAD_CLIENTE);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -129,7 +121,7 @@ class Administrador extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Administrador the static model class
+	 * @return Cliente the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

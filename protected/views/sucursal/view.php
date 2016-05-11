@@ -1,22 +1,37 @@
 <?php
-/* @var $this AdministradorController */
-/* @var $model Administrador */
-?>
-<div class="page-header" align="right">
-	<h2>Detalles de la cuenta <small> Administrador</small></h2>
-</div>
-<?php
+/* @var $this SucursalController */
+/* @var $model Sucursal */
+
+$this->breadcrumbs=array(
+	'Sucursals'=>array('index'),
+	$model->ID_SUCURSAL,
+);
+
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 
 
 $menu2=array(
-	array('label'=>'Administrador','url'=>array('index'),'icon'=>'fa fa-list-alt', 'items' => $menu)	
+	array('label'=>'Sucursal','url'=>array('index'),'icon'=>'fa fa-list-alt', 'items' => $menu)	
 );
 
 if(!isset($_GET['asModal'])){
 ?>
-
+<?php $box = $this->beginWidget(
+    'bootstrap.widgets.TbBox',
+    array(
+        'title' => 'View Sucursals #'.$model->ID_SUCURSAL,
+        'headerIcon' => 'icon- fa fa-eye',
+        'headerButtons' => array(
+            array(
+                'class' => 'bootstrap.widgets.TbButtonGroup',
+                'type' => 'success',
+                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+                'buttons' => $menu2
+            ),
+        ) 
+    )
+);?>
 <?php
 }
 ?>
@@ -37,18 +52,9 @@ if(!isset($_GET['asModal'])){
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
-			'RUT_PERSONAL',
-		'ID_SUCURSAL',
-		'NOMBRE_PERSONAL',
-		'PATERNO_PERSONAL',
-		'MATERNO_PERSONAL',
-		'CONTRASENA_PERSONAL',
-		'SEXO_PERSONAL',
-		'TELEFONO_PERSONAL',
-		'DIRECCION_PERSONAL',
-		'EMAIL_PERSONAL',
-		'AUTORIZADO_PERSONAL',
-		//'CARGO_PERSONAL',
+			'ID_SUCURSAL',
+		'NOMBRE_SUCURSAL',
+		'DIRECCION_SUCURSAL',
 		/*
 		//CONTOH
 		array(
@@ -66,5 +72,5 @@ if(!isset($_GET['asModal'])){
 
 <?php
 if(!isset($_GET['asModal'])){
-	}
+	$this->endWidget();}
 ?>

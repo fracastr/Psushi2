@@ -1,24 +1,32 @@
 <?php
-/* @var $this AdministradorController */
-/* @var $model Administrador */
+$this->breadcrumbs=array(
+	'Clientes'=>array('index'),
+	$model->RUT_CLIENTE=>array('view','id'=>$model->RUT_CLIENTE),
+	'Update',
+);
 
-/* $this->breadcrumbs=array(
-	'Administradors'=>array('index'),
-	'Create',
-); */
-?>
-<div class="page-header" align="right">
-	<h2>Crear cuenta de Administrador</h2>
-</div>
-
-<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 $this->menu=array(
-	array('label'=>'Administrador','url'=>array('index'),'icon'=>'fa fa-list-alt', 'items' => $menu)	
+	array('label'=>'Cliente','url'=>array('index'),'icon'=>'fa fa-list-alt', 'items' => $menu)	
 );
 ?>
 
+<?php $box = $this->beginWidget(
+    'bootstrap.widgets.TbBox',
+    array(
+        'title' => 'Update Clientes #'.$model->RUT_CLIENTE,
+        'headerIcon' => 'icon- fa fa-pencil',
+        'headerButtons' => array(
+            array(
+                'class' => 'bootstrap.widgets.TbButtonGroup',
+                'type' => 'success',
+                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+                'buttons' => $this->menu
+            ),
+        ) 
+    )
+);?>
 		<?php $this->widget('bootstrap.widgets.TbAlert', array(
 		    'block'=>false, // display a larger alert block?
 		    'fade'=>true, // use transitions?
@@ -31,5 +39,5 @@ $this->menu=array(
 		        'danger'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), //success, info, warning, error or danger
 		    ),
 		));
-		?>		
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+		?><?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
+<?php $this->endWidget(); ?>
