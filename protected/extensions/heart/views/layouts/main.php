@@ -33,12 +33,13 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
 			'class'=>'bootstrap.widgets.TbMenu',
 			'htmlOptions'=>array('class'=>'pull-right'),
 			'items'=>array(
-				array('label'=>'Login', 'url'=>array('/site/login'), 'icon'=>'fa fa-unlock', 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Entrar', 'url'=>array('/site/login'), 'icon'=>'fa fa-unlock', 'visible'=>Yii::app()->user->isGuest),
 				//'---',
-				array('label'=>'', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
-					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('site/logout'), 'icon'=>'fa fa-power-off',),
+				//array('label'=>'', 'url'=>'#', 'icon'=>'fa fa-user', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
+					array('label'=>'Salir ('.Yii::app()->user->name.')', 'visible'=>!Yii::app()->user->isGuest,'url'=>array('site/logout'), 'icon'=>'fa fa-power-off',),
 	
-				)),
+				//)
+				//),
 			),
 		),
 	),

@@ -31,6 +31,6 @@
 			<?php echo $content; ?>
 		</div><!-- content -->
 	</div>
-	
+
 </div>
 <?php $this->endContent(); ?>

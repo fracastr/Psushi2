@@ -478,3 +478,44 @@ Stack trace:
 REQUEST_URI=/yii/Psushi/index.php?r=gii/model/index
 HTTP_REFERER=http://localhost/yii/Psushi/index.php?r=gii/default/index
 ---
+2016/05/19 06:25:21 [error] [php] include(TbBox.php): failed to open stream: No such file or directory (C:\wamp64\www\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\wamp64\www\framework\web\CWidgetFactory.php(147): spl_autoload_call()
+#1 C:\wamp64\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\wamp64\www\framework\web\CBaseController.php(197): SiteController->createWidget()
+#3 C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php(14): SiteController->beginWidget()
+#4 C:\wamp64\www\framework\web\CBaseController.php(126): require()
+#5 C:\wamp64\www\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\wamp64\www\framework\web\CController.php(784): SiteController->renderFile()
+#7 C:\wamp64\www\psushi2\protected\controllers\SiteController.php(98): SiteController->render()
+#8 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp64\www\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\wamp64\www\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp64\www\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\psushi2\index.php(13): CWebApplication->run()
+REQUEST_URI=/psushi2/index.php?r=site/login
+in C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php (14)
+in C:\wamp64\www\psushi2\protected\controllers\SiteController.php (98)
+in C:\wamp64\www\psushi2\index.php (13)
+2016/05/19 06:26:51 [error] [exception.CException] exception 'CException' with message 'SiteController has an extra endWidget(CContentDecorator) call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+Stack trace:
+#0 C:\wamp64\www\framework\web\CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#1 C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php(18): CBaseController->endContent()
+#2 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#4 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#5 C:\wamp64\www\psushi2\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp64\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/psushi2/index.php?r=site/login
+---

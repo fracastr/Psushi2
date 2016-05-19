@@ -23,8 +23,8 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
 			'items'=>array(
 					array('label'=>'Back To Website', 'url'=>Yii::app()->baseUrl, 'icon'=>'fa fa-home'),
 					array('label'=>'Heart Gii', 'url'=>array('index'), 'icon'=>'fa fa-rocket','active'=>(@$currController=='heart')),
-					
-											
+
+
 			),
 		),
 	),
@@ -41,13 +41,13 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
 		        'headerIcon' => 'icon- fa fa-list-alt'
 		    )
 		);?>
-			
-			<?php 
+
+			<?php
 			$menu=array();
 			$menu[]=array('label'=>'Heart','url'=>array('heart/index'),'icon'=>'fa fa-rocket','active'=>(@$currController=='heart'));
 			$menu[]=array('label'=>'Model','url'=>array('model/index'),'icon'=>'fa fa-chevron-circle-right','active'=>(@$currController=='model'));
 			$menu[]=array('label'=>'Crud','url'=>array('crud/index'),'icon'=>'fa fa-chevron-circle-right','active'=>(@$currController=='crud'));
-			
+
 			$this->widget(
 				'bootstrap.widgets.TbTabs',
 				array(
@@ -62,9 +62,9 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
 	</div>
 	<div class="span10">
 		<div id="content">
-		
+
 			<?php echo $content; ?>
-			
+
 		</div><!-- content -->
 	</div>
 </div>

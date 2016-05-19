@@ -140,6 +140,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template'=>'{view}',
+			'header'=>'Detalles',
 			'buttons'=>array
             (
                 'view' => array
@@ -154,6 +155,15 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
                 	}',
                 ),
                             )
+		),
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template'=>'{delete}',
+			'header'=>'Eliminar',
+			'buttons'=>array
+			(
+				
+			)
 		),
 	),
 )); ?>
