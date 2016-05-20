@@ -1,12 +1,11 @@
 <?php
 /* @var $this AdministradorController */
 /* @var $model Administrador */
-
-$this->breadcrumbs=array(
-	'Administradors'=>array('index'),
-	$model->RUT_PERSONAL,
-);
-
+?>
+<div class="page-header" align="right">
+	<h2>Detalles de la cuenta <small> Administrador</small></h2>
+</div>
+<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 
@@ -17,21 +16,7 @@ $menu2=array(
 
 if(!isset($_GET['asModal'])){
 ?>
-<?php $box = $this->beginWidget(
-    'bootstrap.widgets.TbBox',
-    array(
-        'title' => 'View Administradors #'.$model->RUT_PERSONAL,
-        'headerIcon' => 'icon- fa fa-eye',
-        'headerButtons' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbButtonGroup',
-                'type' => 'success',
-                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'buttons' => $menu2
-            ),
-        ) 
-    )
-);?>
+
 <?php
 }
 ?>
@@ -63,7 +48,7 @@ if(!isset($_GET['asModal'])){
 		'DIRECCION_PERSONAL',
 		'EMAIL_PERSONAL',
 		'AUTORIZADO_PERSONAL',
-		'CARGO_PERSONAL',
+		//'CARGO_PERSONAL',
 		/*
 		//CONTOH
 		array(
@@ -81,5 +66,5 @@ if(!isset($_GET['asModal'])){
 
 <?php
 if(!isset($_GET['asModal'])){
-	$this->endWidget();}
+	}
 ?>
