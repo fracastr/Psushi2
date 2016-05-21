@@ -23,4 +23,4 @@
 	}
 	?>
 </div><!-- content -->
-<?php //$this->endContent(); ?>
+<?php $this->endContent(); ?>

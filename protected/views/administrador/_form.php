@@ -35,8 +35,9 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="200">
-		<?php echo $form->textFieldRow($model,'SEXO_PERSONAL',array('class'=>'span5','maxlength'=>1)); ?>
+
+		<td WIDTH=200><br><?php echo "Sexo: <br>"; ?>
+			<?php echo $form->dropDownList($model,'SEXO_PERSONAL',array('Masculino'=>'Masculino','Femenino'=>'Femenino')); ?>
 		</td>
 		<td width="200">
 		<?php echo $form->textFieldRow($model,'TELEFONO_PERSONAL',array('class'=>'span5')); ?>

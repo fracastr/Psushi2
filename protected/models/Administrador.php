@@ -35,14 +35,21 @@ class Administrador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('RUT_PERSONAL, TELEFONO_PERSONAL', 'required', 'message'=>'Este campo es obligatorio'),
-			array('ID_SUCURSAL, TELEFONO_PERSONAL', 'numerical', 'integerOnly'=>true),
+			array('RUT_PERSONAL, TELEFONO_PERSONAL, CONTRASENA_PERSONAL', 'required', 'message'=>'Este campo es obligatorio'),
+			array('ID_SUCURSAL, TELEFONO_PERSONAL', 'numerical', 'integerOnly'=>true, 'message'=>'Debe indicar un valor numérico'),
 			array('AUTORIZADO_PERSONAL', 'numerical', 'integerOnly'=>false),
 			array('RUT_PERSONAL', 'length', 'max'=>15),
 			array('NOMBRE_PERSONAL, PATERNO_PERSONAL, MATERNO_PERSONAL, CONTRASENA_PERSONAL, CARGO_PERSONAL', 'length', 'max'=>30),
-			array('SEXO_PERSONAL', 'length', 'max'=>1),
+			array('CONTRASENA_PERSONAL','length2'),
+			//array('SEXO_PERSONAL', 'length', 'max'=>1),
 			array('DIRECCION_PERSONAL', 'length', 'max'=>50),
 			array('EMAIL_PERSONAL', 'length', 'max'=>100),
+			//array('EMAIL_PERSONAL','validateEmail'),
+			array('RUT_PERSONAL','validateRUT'),
+			array('SEXO_PERSONAL','validateSexo'),
+			array('NOMBRE_PERSONAL, PATERNO_PERSONAL, MATERNO_PERSONAL', 'match', 'pattern' => '/^[A-Z a-záéíóúñ]+$/u',
+
+				'message'=>'El nombre del profesor sólo puede contener letras.'),
 			
 			/*
 			//Example username
@@ -66,6 +73,50 @@ class Administrador extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 		);
+	}
+
+	public function validateEmail($attribute, $params) {
+
+		if(!empty($EMAIL_PERSONAL)){
+
+
+			$arroba=strpos($this->EMAIL_PERSONAL,'@');
+			if($arroba==false) $this->addError('EMAIL_PERSONAL','Email inválido.');
+
+
+		}}
+	public function validateSexo($attribute, $params){
+		if($this->SEXO_PERSONAL!='Femenino')
+		{
+			if($this->SEXO_PERSONAL!='Masculino'){$this->addError('SEXO_PERSONAL', 'Debe indicar un valor para este campo.');}
+
+		}
+	}
+
+	public function length2($attribute,$params){
+
+		if(strlen($this->CONTRASENA_PERSONAL)<5)$this->addError('CONTRASENA_PERSONAL','La contraseña debe tener al menos 5 caracteres.');
+	}
+
+	public function validateRut($attribute, $params) {
+		$data = explode('-', $this->RUT_PERSONAL);
+		$evaluate = strrev($data[0]);
+		$multiply = 2;
+		$store = 0;
+		for ($i = 0; $i < strlen($evaluate); $i++) {
+			$store += $evaluate[$i] * $multiply;
+			$multiply++;
+			if ($multiply > 7)
+				$multiply = 2;
+		}
+		isset($data[1]) ? $verifyCode = strtolower($data[1]) : $verifyCode = '';
+		$result = 11 - ($store % 11);
+		if ($result == 10)
+			$result = 'k';
+		if ($result == 11)
+			$result = 0;
+		if ($verifyCode != $result)
+			$this->addError('RUT_PERSONAL', 'Rut de Administrador inválido, utilice formato 12345678-9');
 	}
 
 	/**

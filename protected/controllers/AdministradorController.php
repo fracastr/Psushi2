@@ -87,12 +87,12 @@ class AdministradorController extends Controller
 			$transaction = Yii::app()->db->beginTransaction();
 			try{
 				$messageType='warning';
-				$message = "There are some errors ";
+				$message = "Hay algunos errores ";
 				$model->attributes=$_POST['Administrador'];
 				//$uploadFile=CUploadedFile::getInstance($model,'filename');
 				if($model->save()){
 					$messageType = 'success';
-					$message = "<strong>Well done!</strong> You successfully create data ";
+					$message = "<strong>Cuenta creada satisfactoriamente</strong>";
 					/*
 					$model2 = Administrador::model()->findByPk($model->RUT_PERSONAL);						
 					if(!empty($uploadFile)) {
@@ -146,12 +146,12 @@ class AdministradorController extends Controller
 		if(isset($_POST['Administrador']))
 		{
 			$messageType='warning';
-			$message = "There are some errors ";
+			$message = "Hay algunos errores ";
 			$transaction = Yii::app()->db->beginTransaction();
 			try{
 				$model->attributes=$_POST['Administrador'];
 				$messageType = 'success';
-				$message = "<strong>Well done!</strong> You successfully update data ";
+				$message = "<strong>Cuenta actualizada satisfactoriamente</strong>";
 
 				/*
 				$uploadFile=CUploadedFile::getInstance($model,'filename');
