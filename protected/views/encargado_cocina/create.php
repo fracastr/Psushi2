@@ -2,11 +2,12 @@
 /* @var $this Encargado_cocinaController */
 /* @var $model Encargado_cocina */
 
-$this->breadcrumbs=array(
-	'Encargado Cocinas'=>array('index'),
-	'Create',
-);
+?>
+<div class="page-header" align="right">
+	<h2>Crear cuenta de Encargado de Cocina</h2>
+</div>
 
+<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 $this->menu=array(
@@ -14,21 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<?php $box = $this->beginWidget(
-    'bootstrap.widgets.TbBox',
-    array(
-        'title' => 'Create Encargado Cocinas' ,
-        'headerIcon' => 'icon- fa fa-plus-circle',
-        'headerButtons' => array(
-        	array(
-            	'class' => 'bootstrap.widgets.TbButtonGroup',
-            	'type' => 'success',
-            	// '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-            	'buttons' => $this->menu
-            )
-        )        
-    )
-);?>
+
 		<?php $this->widget('bootstrap.widgets.TbAlert', array(
 		    'block'=>false, // display a larger alert block?
 		    'fade'=>true, // use transitions?
@@ -43,4 +30,3 @@ $this->menu=array(
 		));
 		?>		
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
-<?php $this->endWidget(); ?>

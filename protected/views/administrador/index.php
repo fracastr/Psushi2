@@ -69,6 +69,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	'emptyText'=>'No existen cuentas de Administrador',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'summaryText'=>'',
 	'type' => 'striped hover', //bordered condensed
 	'columns'=>array(
 		array(
@@ -129,10 +130,13 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template'=>'{view}',
+			'header'=>'Detalles',
 			'buttons'=>array
             (
                 'view' => array
-                (    
+                (
+					'label'=>'Ver detalles',
+					'icon'=>'fa fa-eye',
                 	'url' => '$data->RUT_PERSONAL."|".$data->RUT_PERSONAL',              
                 	'click' => 'function(){
                 		data=$(this).attr("href").split("|")
@@ -143,6 +147,20 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
                 	}',
                 ),
                             )
+		),
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template'=>'{delete}',
+			'header'=>'Eliminar',
+			'deleteConfirmation'=>'Está seguro que desea eliminar esta Cuenta de Administrador?',
+			'buttons'=>array
+			(
+				'delete'=>array(
+					'icon'=>'fa fa-trash-o',
+					'label'=>'Eliminar cuenta',
+
+				),
+			)
 		),
 	),
 )); ?>
@@ -168,7 +186,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
         <?php  $this->widget(
             'bootstrap.widgets.TbButton',
             array(
-                'label' => 'Close',
+                'label' => 'Entendido',
                 'url' => '#',
                 'htmlOptions' => array('data-dismiss' => 'modal'),
             )

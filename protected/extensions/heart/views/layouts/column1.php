@@ -1,10 +1,10 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 <div id="content">
-	<?php 
+	<?php
 	$currController 	= Yii::app()->controller->id;
 	$currAction			= Yii::app()->controller->action->id;
-	if($currController=='site'){
+	/*if($currController=='site'){
 		$box = $this->beginWidget(
 		    'bootstrap.widgets.TbBox',
 		    array(
@@ -12,9 +12,9 @@
 		        'headerIcon' => 'icon- fa fa-home'
 		    )
 		);
-	}
+	}*/
 	?>
-	
+
 	<?php echo $content; ?>
 
 	<?php

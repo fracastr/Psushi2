@@ -456,254 +456,330 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/psushi2/index.php?r=?r=administrador/index
 ---
-2016/05/09 19:50:53 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+2016/05/10 17:09:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'grupo314userdb'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:399
 Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Psushi\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Psushi/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/yii/Psushi/index.php?r=gii/default/index
 ---
-2016/05/09 19:50:55 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+2016/05/19 06:25:21 [error] [php] include(TbBox.php): failed to open stream: No such file or directory (C:\wamp64\www\framework\YiiBase.php:432)
 Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
+#0 C:\wamp64\www\framework\web\CWidgetFactory.php(147): spl_autoload_call()
+#1 C:\wamp64\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\wamp64\www\framework\web\CBaseController.php(197): SiteController->createWidget()
+#3 C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php(14): SiteController->beginWidget()
+#4 C:\wamp64\www\framework\web\CBaseController.php(126): require()
+#5 C:\wamp64\www\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\wamp64\www\framework\web\CController.php(784): SiteController->renderFile()
+#7 C:\wamp64\www\psushi2\protected\controllers\SiteController.php(98): SiteController->render()
+#8 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp64\www\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\wamp64\www\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp64\www\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\psushi2\index.php(13): CWebApplication->run()
+REQUEST_URI=/psushi2/index.php?r=site/login
+in C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php (14)
+in C:\wamp64\www\psushi2\protected\controllers\SiteController.php (98)
+in C:\wamp64\www\psushi2\index.php (13)
+2016/05/19 06:26:51 [error] [exception.CException] exception 'CException' with message 'SiteController has an extra endWidget(CContentDecorator) call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+Stack trace:
+#0 C:\wamp64\www\framework\web\CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#1 C:\wamp64\www\psushi2\protected\extensions\heart\views\layouts\column1.php(18): CBaseController->endContent()
+#2 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#4 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#5 C:\wamp64\www\psushi2\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
 #7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
+#8 C:\wamp64\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/psushi2/index.php?r=site/login
 ---
-2016/05/09 19:51:07 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+2016/05/21 00:34:22 [error] [exception.CException] exception 'CException' with message 'AdministradorController contains improperly nested widget tags in its view "C:\wamp64\www\psushi2\protected\extensions\heart\views//layouts/column1.php". A CContentDecorator widget does not have an endWidget() call.' in C:\wamp64\www\framework\web\CBaseController.php:101
 Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
+#0 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#1 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
+#2 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
+#3 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
+#13 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#15 {main}
 REQUEST_URI=/psushi2/index.php?r=administrador/index
+HTTP_REFERER=http://localhost/psushi2/index.php
 ---
-2016/05/09 19:51:08 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+2016/05/21 00:34:33 [error] [exception.CException] exception 'CException' with message 'Encargado_cocinaController contains improperly nested widget tags in its view "C:\wamp64\www\psushi2\protected\extensions\heart\views//layouts/column1.php". A CContentDecorator widget does not have an endWidget() call.' in C:\wamp64\www\framework\web\CBaseController.php:101
 Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#0 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#1 C:\wamp64\www\psushi2\protected\controllers\Encargado_cocinaController.php(235): CController->render('index', Array)
+#2 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): Encargado_cocinaController->actionIndex()
+#3 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('encargado_cocin...')
+#13 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/psushi2/index.php?r=encargado_cocina/index
+HTTP_REFERER=http://localhost/psushi2/index.php
+---
+2016/05/21 00:34:43 [error] [exception.CException] exception 'CException' with message 'RepartidorController contains improperly nested widget tags in its view "C:\wamp64\www\psushi2\protected\extensions\heart\views//layouts/column1.php". A CContentDecorator widget does not have an endWidget() call.' in C:\wamp64\www\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#1 C:\wamp64\www\psushi2\protected\controllers\RepartidorController.php(235): CController->render('index', Array)
+#2 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): RepartidorController->actionIndex()
+#3 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('repartidor/inde...')
+#13 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/psushi2/index.php?r=repartidor/index
+HTTP_REFERER=http://localhost/psushi2/index.php
+---
+2016/05/21 00:35:18 [error] [exception.CException] exception 'CException' with message 'AdministradorController contains improperly nested widget tags in its view "C:\wamp64\www\psushi2\protected\extensions\heart\views//layouts/column1.php". A CContentDecorator widget does not have an endWidget() call.' in C:\wamp64\www\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\wamp64\www\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#1 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(128): CController->render('create', Array)
+#2 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
+#3 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#13 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/psushi2/index.php?r=administrador/create
+HTTP_REFERER=http://localhost/psushi2/index.php
+---
+2016/05/21 00:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php:267
+Stack trace:
+#0 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(206): AdministradorController->loadModel('2')
+#1 [internal function]: AdministradorController->actionDelete('2')
+#2 C:\wamp64\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AdministradorController), Array)
+#3 C:\wamp64\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdministradorController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
 #10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
 #11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
 #12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
 #14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
+#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/d...')
 #17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
 #18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
 #19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
+REQUEST_URI=/psushi2/index.php?ajax=administrador-grid&id=2&r=administrador%2Fdelete
+HTTP_REFERER=http://localhost/psushi2/index.php?r=administrador/index
 ---
-2016/05/09 19:51:09 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
+2016/05/21 00:49:23 [warning] [application] Failed to set unsafe attribute "SEXO_PERSONAL" of "Administrador".
+in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
+in C:\wamp64\www\psushi2\index.php (13)
+2016/05/21 01:10:13 [error] [exception.CException] exception 'CException' with message 'Administrador has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp64\www\framework\base\CModel.php:289
 Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
----
-2016/05/09 19:51:09 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
-Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
----
-2016/05/09 19:51:10 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
-Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
----
-2016/05/09 19:51:10 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
-Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\index.php(145): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(235): CController->render('index', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionIndex()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('index')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/i...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/psushi2/index.php?r=administrador/index
----
-2016/05/09 20:00:30 [error] [exception.CException] exception 'CException' with message 'AdministradorController has an extra endWidget() call in its view.' in C:\wamp64\www\framework\web\CBaseController.php:218
-Stack trace:
-#0 C:\wamp64\www\psushi2\protected\views\administrador\create.php(31): CBaseController->endWidget()
-#1 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
-#2 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
-#3 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
-#4 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
-#5 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(128): CController->render('create', Array)
-#6 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
-#7 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('create')
-#16 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
-#17 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#18 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
-#19 {main}
+#0 C:\wamp64\www\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\wamp64\www\framework\base\CModel.php(304): CModel->getValidators('RUT_PERSONAL')
+#2 C:\wamp64\www\framework\web\helpers\CHtml.php(1514): CModel->isAttributeRequired('RUT_PERSONAL')
+#3 C:\wamp64\www\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Administrador), 'RUT_PERSONAL', Array)
+#4 C:\wamp64\www\psushi2\protected\extensions\yiibooster2\widgets\TbActiveForm.php(1224): CActiveForm->labelEx(Object(Administrador), 'RUT_PERSONAL', Array)
+#5 C:\wamp64\www\psushi2\protected\extensions\yiibooster2\widgets\TbActiveForm.php(1110): TbActiveForm->verticalFieldRow(Array, Object(Administrador), 'RUT_PERSONAL', Array)
+#6 C:\wamp64\www\psushi2\protected\extensions\yiibooster2\widgets\TbActiveForm.php(375): TbActiveForm->customFieldRowInternal(Array, Object(Administrador), 'RUT_PERSONAL', Array)
+#7 C:\wamp64\www\psushi2\protected\views\administrador\_form.php(18): TbActiveForm->textFieldRow(Object(Administrador), 'RUT_PERSONAL', Array)
+#8 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#9 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#10 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#11 C:\wamp64\www\psushi2\protected\views\administrador\create.php(35): CController->renderPartial('_form', Array)
+#12 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#13 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#14 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#15 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(128): CController->render('create', Array)
+#17 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
+#18 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#28 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#29 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#30 {main}
 REQUEST_URI=/psushi2/index.php?r=administrador/create
 ---
-2016/05/09 20:22:17 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
+2016/05/21 01:16:50 [error] [exception.CException] exception 'CException' with message 'Property "Administrador.especialidad" is not defined.' in C:\wamp64\www\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('especialidad')
+#1 C:\wamp64\www\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('especialidad')
+#2 C:\wamp64\www\framework\web\helpers\CHtml.php(1982): CHtml::resolveValue(Object(Administrador), 'especialidad')
+#3 C:\wamp64\www\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(Administrador), 'especialidad', Array, Array)
+#4 C:\wamp64\www\psushi2\protected\views\administrador\_form.php(40): CActiveForm->dropDownList(Object(Administrador), 'especialidad', Array)
+#5 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#6 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#7 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#8 C:\wamp64\www\psushi2\protected\views\administrador\create.php(35): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#10 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#11 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#12 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(128): CController->render('create', Array)
+#14 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
+#15 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#25 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/psushi2/index.php?r=administrador/create
+---
+2016/05/21 01:16:52 [error] [exception.CException] exception 'CException' with message 'Property "Administrador.especialidad" is not defined.' in C:\wamp64\www\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('especialidad')
+#1 C:\wamp64\www\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('especialidad')
+#2 C:\wamp64\www\framework\web\helpers\CHtml.php(1982): CHtml::resolveValue(Object(Administrador), 'especialidad')
+#3 C:\wamp64\www\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(Administrador), 'especialidad', Array, Array)
+#4 C:\wamp64\www\psushi2\protected\views\administrador\_form.php(40): CActiveForm->dropDownList(Object(Administrador), 'especialidad', Array)
+#5 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#6 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#7 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#8 C:\wamp64\www\psushi2\protected\views\administrador\create.php(35): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\p...')
+#10 C:\wamp64\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\p...', Array, true)
+#11 C:\wamp64\www\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp64\\www\\p...', Array, true)
+#12 C:\wamp64\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(128): CController->render('create', Array)
+#14 C:\wamp64\www\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
+#15 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#25 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/psushi2/index.php?r=administrador/create
+---
+2016/05/21 01:30:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php:267
+Stack trace:
+#0 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(67): AdministradorController->loadModel('123')
+#1 [internal function]: AdministradorController->actionView('123')
+#2 C:\wamp64\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AdministradorController), Array)
+#3 C:\wamp64\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdministradorController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/v...')
+#14 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/psushi2/index.php?r=administrador/view&id=123
+---
+2016/05/21 01:30:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php:267
+Stack trace:
+#0 C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php(67): AdministradorController->loadModel('1')
+#1 [internal function]: AdministradorController->actionView('1')
+#2 C:\wamp64\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AdministradorController), Array)
+#3 C:\wamp64\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdministradorController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/v...')
+#14 C:\wamp64\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\psushi2\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/psushi2/index.php?r=administrador/view&id=1
+---
+2016/05/21 01:35:08 [warning] [application] Failed to set unsafe attribute "SEXO_PERSONAL" of "Encargado_cocina".
+in C:\wamp64\www\psushi2\protected\controllers\Encargado_cocinaController.php (91)
 in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:22:21 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
+2016/05/21 01:41:30 [warning] [application] Failed to set unsafe attribute "SEXO_PERSONAL" of "Encargado_cocina".
+in C:\wamp64\www\psushi2\protected\controllers\Encargado_cocinaController.php (91)
 in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:22:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ID_SUCURSAL' cannot be null. The SQL statement executed was: INSERT INTO `ADMINISTRADOR` (`RUT_PERSONAL`, `ID_SUCURSAL`, `NOMBRE_PERSONAL`, `PATERNO_PERSONAL`, `MATERNO_PERSONAL`, `SEXO_PERSONAL`, `TELEFONO_PERSONAL`, `DIRECCION_PERSONAL`, `EMAIL_PERSONAL`, `CONTRASENA_PERSONAL`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (93)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:22:28 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:22:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1231' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `ADMINISTRADOR` (`RUT_PERSONAL`, `ID_SUCURSAL`, `NOMBRE_PERSONAL`, `PATERNO_PERSONAL`, `MATERNO_PERSONAL`, `SEXO_PERSONAL`, `TELEFONO_PERSONAL`, `DIRECCION_PERSONAL`, `EMAIL_PERSONAL`, `CONTRASENA_PERSONAL`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (93)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:22:38 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:23:02 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:23:35 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:24:12 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:27:55 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
-in C:\wamp64\www\psushi2\index.php (13)
-2016/05/09 20:28:36 [warning] [application] Failed to set unsafe attribute "AUTORIZADO_PERSONAL" of "Administrador".
-in C:\wamp64\www\psushi2\protected\controllers\AdministradorController.php (91)
+2016/05/21 01:41:42 [warning] [application] Failed to set unsafe attribute "SEXO_PERSONAL" of "Encargado_cocina".
+in C:\wamp64\www\psushi2\protected\controllers\Encargado_cocinaController.php (91)
 in C:\wamp64\www\psushi2\index.php (13)
 2016/05/10 19:20:08 [warning] [application] Failed to set unsafe attribute "file" of "CrudCode".
 in C:\xampp\htdocs\yii\psushi2\index.php (13)

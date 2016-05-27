@@ -157,7 +157,7 @@ class Repartidor extends CActiveRecord
 		$userId=0;
 		if(null!=Yii::app()->user->id) $userId=(int)Yii::app()->user->id;
                                 
-        return false;
+        return true;
     }
 
     public function afterFind()    {

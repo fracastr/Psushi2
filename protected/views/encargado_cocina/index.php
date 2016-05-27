@@ -1,11 +1,11 @@
 <?php
 /* @var $this Encargado_cocinaController */
 /* @var $dataProvider CActiveDataProvider */
-
-$this->breadcrumbs=array(
-	'Encargado Cocinas',
-);
-
+?>
+<div class="page-header" align="right">
+  <h2>Cuentas de Encargado de Cocina</h2>
+</div>
+<?php
 $menu=array();
 require(dirname(__FILE__).DIRECTORY_SEPARATOR.'_menu.php');
 $this->menu=array(
@@ -32,21 +32,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 
 ?>
 
-<?php $box = $this->beginWidget(
-    'bootstrap.widgets.TbBox',
-    array(
-        'title' => 'List Encargado Cocinas' ,
-        'headerIcon' => 'icon- fa fa-list-ol',
-        'headerButtons' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbButtonGroup',
-                'type' => 'success',
-                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'buttons' => $this->menu
-            ),
-        ) 
-    )
-);?>
+
 <?php /** $this->widget('bootstrap.widgets.TbListView',array(
 'dataProvider'=>$dataProvider,
 'itemView'=>'_view',
@@ -63,13 +49,9 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		        'danger'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), //success, info, warning, error or danger
 		    ),
 		));
-		?><p>
-	You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
-		&lt;&gt;</b>
-	or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+		?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
+
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -81,6 +63,8 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	'id'=>'encargado-cocina-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'summaryText'=>'',
+	'emptyText'=>'No existen cuentas de Encargado de Cocina',
 	'type' => 'striped hover', //bordered condensed
 	'columns'=>array(
 		array(
@@ -88,12 +72,7 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	        'value' => '($data->RUT_PERSONAL)',
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
 	    ),
-		
-		array(
-	        'name'=> 'ID_SUCURSAL',
-	        'value' => '($data->ID_SUCURSAL)',
-	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
-	    ),
+
 		
 		array(
 	        'name'=> 'NOMBRE_PERSONAL',
@@ -113,17 +92,13 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
 	    ),
 		
-		array(
-	        'name'=> 'CONTRASENA_PERSONAL',
-	        'value' => '($data->CONTRASENA_PERSONAL)',
-	        'headerHtmlOptions' => array('style' => 'text-align:center;'),
-	    ),
+		
 		
 		//'SEXO_PERSONAL',
 		//'TELEFONO_PERSONAL',
 		//'DIRECCION_PERSONAL',
 		//'EMAIL_PERSONAL',
-		//'AUTORIZADO_PERSONAL',
+		'AUTORIZADO_PERSONAL',
 		//'CARGO_PERSONAL',
 
 		/*
@@ -140,10 +115,13 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template'=>'{view}',
+			'header'=>'Detalles',
 			'buttons'=>array
             (
                 'view' => array
-                (    
+                (
+					'label'=>'Ver detalles',
+					'icon'=>'fa fa-eye',
                 	'url' => '$data->RUT_PERSONAL."|".$data->RUT_PERSONAL',              
                 	'click' => 'function(){
                 		data=$(this).attr("href").split("|")
@@ -155,24 +133,26 @@ Yii::app()->clientScript->registerScript('refreshGridView', "
                 ),
                             )
 		),
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template'=>'{delete}',
+			'header'=>'Eliminar',
+			'deleteConfirmation'=>'Está seguro que desea eliminar esta Cuenta de Encargado de Cocina?',
+			'buttons'=>array
+			(
+				'delete'=>array(
+					'icon'=>'fa fa-trash-o',
+					'label'=>'Eliminar cuenta',
+
+				),
+			)
+		),
 	),
 )); ?>
 
-<select name="fileType" style="width:150px;">
-	<option value="Excel5">EXCEL 5 (xls)</option>
-	<option value="Excel2007">EXCEL 2007 (xlsx)</option>
-	<option value="HTML">HTML</option>
-	<option value="PDF">PDF</option>
-	<option value="WORD">WORD (docx)</option>
-</select>
-<br>
 
-<?php 
-$this->widget('bootstrap.widgets.TbButton', array(
-	'buttonType'=>'submit', 'icon'=>'fa fa-print','label'=>'Export', 'type'=> 'primary'));
-?>
 <?php echo CHtml::endForm(); ?>
-<?php $this->endWidget(); ?>
+
 <?php  $this->beginWidget(
     'bootstrap.widgets.TbModal',
     array('id' => 'myModal')
@@ -191,7 +171,7 @@ $this->widget('bootstrap.widgets.TbButton', array(
         <?php  $this->widget(
             'bootstrap.widgets.TbButton',
             array(
-                'label' => 'Close',
+                'label' => 'Entendido',
                 'url' => '#',
                 'htmlOptions' => array('data-dismiss' => 'modal'),
             )
